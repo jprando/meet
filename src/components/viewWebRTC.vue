@@ -1,7 +1,7 @@
 <template>
 <div>
-  <button @click="iniciar" :disabled="joined">iniciar</button>
-  <button @click="sair">sair</button>
+  <button @click="entrar" :disabled="joined">entrar</button>
+  <button @click="sair" :disabled="!joined">sair</button>
   <vue-webrtc ref="vwrtc" width="100%" roomId="publicRoom"></vue-webrtc>
 </div>
 </template>
@@ -21,7 +21,7 @@ export default {
         }
     },
     methods:{
-        iniciar() {
+        entrar() {
             this.$refs.vwrtc.join()
             this.joined = true
         },

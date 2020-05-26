@@ -2,7 +2,8 @@
 <div>
   <button @click="entrar" :disabled="joined">entrar</button>
   <button @click="sair" :disabled="!joined">sair</button>
-  <vue-webrtc ref="vwrtc" width="100%" roomId="publicRoom"></vue-webrtc>
+  <button @click="compartilharTela" :disabled="!joined">compartilhar tela</button>
+  <vue-webrtc ref="vwrtc" cameraHeight="200" width="100%" roomId="publicRoom"></vue-webrtc>
 </div>
 </template>
 
@@ -28,6 +29,9 @@ export default {
         sair() {
             this.$refs.vwrtc.leave()
             this.joined = false
+        },
+        compartilharTela() {
+            this.$refs.vwrtc.shareScreen()
         }
     }
 }

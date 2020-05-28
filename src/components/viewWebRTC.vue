@@ -3,7 +3,7 @@
   <button @click="entrar" :disabled="joined">entrar</button>
   <button @click="sair" :disabled="!joined">sair</button>
   <button @click="compartilharTela" :disabled="!joined">compartilhar tela</button>
-  <vue-webrtc ref="vwrtc" cameraHeight="200" width="100%" roomId="publicRoom"></vue-webrtc>
+  <vue-webrtc ref="vwrtc" cameraHeight="400vh" width="100%" roomId="publicRoom"></vue-webrtc>
 </div>
 </template>
 
